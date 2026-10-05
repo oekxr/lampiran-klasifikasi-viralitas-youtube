@@ -1,0 +1,31 @@
+# Cache Python dan notebook
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Lingkungan Python lokal
+.venv/
+venv/
+env/
+
+# Kredensial lokal
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+credentials-*.json
+client_secret*.json
+token.json
+
+# Berkas sementara
+*.tmp
+*.temp
+~$*
+
+# Berkas sistem operasi
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dataset CSV, hasil CSV/JSON, notebook, dan gambar tetap dilacak.
