@@ -1,0 +1,152 @@
+[
+  {
+    "name": "XGBoost__snapshot__original",
+    "algorithm": "XGBoost",
+    "feature_set": "snapshot",
+    "smotenc": false,
+    "role": "primary",
+    "best_cv_ap": 0.04006290973996905,
+    "best_params": {
+      "clf__subsample": 0.7,
+      "clf__n_estimators": 300,
+      "clf__max_depth": 4,
+      "clf__learning_rate": 0.05,
+      "clf__colsample_bytree": 0.85
+    },
+    "threshold": 0.01771481758950871,
+    "threshold_selection_f1": 0.03169332930878358,
+    "elapsed_seconds": 68.92214059829712
+  },
+  {
+    "name": "XGBoost__snapshot__SMOTENC",
+    "algorithm": "XGBoost",
+    "feature_set": "snapshot",
+    "smotenc": true,
+    "role": "primary",
+    "best_cv_ap": 0.03563808403687711,
+    "best_params": {
+      "clf__subsample": 0.7,
+      "clf__n_estimators": 100,
+      "clf__max_depth": 4,
+      "clf__learning_rate": 0.01,
+      "clf__colsample_bytree": 0.85
+    },
+    "threshold": 0.018095143483854166,
+    "threshold_selection_f1": 0.033308099924299776,
+    "elapsed_seconds": 136.47275257110596
+  },
+  {
+    "name": "RandomForest__snapshot__original",
+    "algorithm": "RandomForest",
+    "feature_set": "snapshot",
+    "smotenc": false,
+    "role": "primary",
+    "best_cv_ap": 0.04775375990401813,
+    "best_params": {
+      "clf__n_estimators": 100,
+      "clf__min_samples_split": 10,
+      "clf__min_samples_leaf": 2,
+      "clf__max_features": "sqrt",
+      "clf__max_depth": null
+    },
+    "threshold": 0.022795214313966184,
+    "threshold_selection_f1": 0.034639927073837735,
+    "elapsed_seconds": 187.44244074821472
+  },
+  {
+    "name": "RandomForest__snapshot__SMOTENC",
+    "algorithm": "RandomForest",
+    "feature_set": "snapshot",
+    "smotenc": true,
+    "role": "primary",
+    "best_cv_ap": 0.03348928932981356,
+    "best_params": {
+      "clf__n_estimators": 200,
+      "clf__min_samples_split": 5,
+      "clf__min_samples_leaf": 2,
+      "clf__max_features": "sqrt",
+      "clf__max_depth": 10
+    },
+    "threshold": 0.018553456540643463,
+    "threshold_selection_f1": 0.0342571208622017,
+    "elapsed_seconds": 360.3953914642334
+  },
+  {
+    "name": "LinearSVM__snapshot__original",
+    "algorithm": "LinearSVM",
+    "feature_set": "snapshot",
+    "smotenc": false,
+    "role": "primary",
+    "best_cv_ap": 0.021139287291642245,
+    "best_params": {
+      "clf__C": 1.0
+    },
+    "threshold": 0.02780002865640935,
+    "threshold_selection_f1": 0.04680851063829788,
+    "elapsed_seconds": 3.5112743377685547
+  },
+  {
+    "name": "LinearSVM__snapshot__SMOTENC",
+    "algorithm": "LinearSVM",
+    "feature_set": "snapshot",
+    "smotenc": true,
+    "role": "primary",
+    "best_cv_ap": 0.020721628202122748,
+    "best_params": {
+      "clf__C": 0.001
+    },
+    "threshold": 0.027605549300107446,
+    "threshold_selection_f1": 0.0411522633744856,
+    "elapsed_seconds": 48.62270379066467
+  },
+  {
+    "name": "XGBoost__no_channel_stats__original",
+    "algorithm": "XGBoost",
+    "feature_set": "no_channel_stats",
+    "smotenc": false,
+    "role": "ablation",
+    "best_cv_ap": 0.030002437930137203,
+    "best_params": {
+      "clf__subsample": 0.85,
+      "clf__n_estimators": 100,
+      "clf__max_depth": 4,
+      "clf__learning_rate": 0.05,
+      "clf__colsample_bytree": 1.0
+    },
+    "threshold": 0.01965035887266186,
+    "threshold_selection_f1": 0.03702801461632156,
+    "elapsed_seconds": 32.169132232666016
+  },
+  {
+    "name": "RandomForest__no_channel_stats__original",
+    "algorithm": "RandomForest",
+    "feature_set": "no_channel_stats",
+    "smotenc": false,
+    "role": "ablation",
+    "best_cv_ap": 0.025721719013685203,
+    "best_params": {
+      "clf__n_estimators": 200,
+      "clf__min_samples_split": 2,
+      "clf__min_samples_leaf": 4,
+      "clf__max_features": "sqrt",
+      "clf__max_depth": 10
+    },
+    "threshold": 0.02519543609759776,
+    "threshold_selection_f1": 0.04287515762925599,
+    "elapsed_seconds": 177.099054813385
+  },
+  {
+    "name": "LinearSVM__no_channel_stats__original",
+    "algorithm": "LinearSVM",
+    "feature_set": "no_channel_stats",
+    "smotenc": false,
+    "role": "ablation",
+    "best_cv_ap": 0.018519154083231605,
+    "best_params": {
+      "clf__C": 0.001
+    },
+    "threshold": 0.019094048031956693,
+    "threshold_selection_f1": 0.03200483091787439,
+    "elapsed_seconds": 3.0494887828826904
+  }
+]

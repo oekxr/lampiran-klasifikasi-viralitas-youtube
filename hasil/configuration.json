@@ -1,0 +1,116 @@
+{
+  "run_mode": "full",
+  "seed": 42,
+  "label_threshold": 2.0,
+  "start_date": "2020-01-01T00:00:00Z",
+  "end_date_exclusive": "2026-01-01T00:00:00Z",
+  "reference_date": "2026-01-01T00:00:00Z",
+  "smote_ratio": 0.25,
+  "smote_k": 3,
+  "cv_folds": 5,
+  "n_iter": 15,
+  "n_bootstrap": 1000,
+  "n_permutations": 10,
+  "versions": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "imbalanced-learn": "0.13.0",
+    "xgboost": "2.1.4",
+    "scipy": "1.15.2",
+    "joblib": "1.6.0"
+  },
+  "data_sha256": "a8ce478d27b368fc67629e2552325aabbdf62f9187c003bde139de1030e193c2",
+  "feature_sets": {
+    "snapshot": [
+      "duration_seconds",
+      "video_age_days",
+      "title_length",
+      "description_length",
+      "tag_count",
+      "channel_subscriber_count",
+      "channel_total_views",
+      "channel_video_count",
+      "has_description",
+      "has_tags",
+      "publish_month",
+      "publish_dayofweek"
+    ],
+    "no_channel_stats": [
+      "duration_seconds",
+      "video_age_days",
+      "title_length",
+      "description_length",
+      "tag_count",
+      "has_description",
+      "has_tags",
+      "publish_month",
+      "publish_dayofweek"
+    ]
+  },
+  "experiments": [
+    {
+      "name": "XGBoost__snapshot__original",
+      "algorithm": "XGBoost",
+      "feature_set": "snapshot",
+      "smotenc": false,
+      "role": "primary"
+    },
+    {
+      "name": "XGBoost__snapshot__SMOTENC",
+      "algorithm": "XGBoost",
+      "feature_set": "snapshot",
+      "smotenc": true,
+      "role": "primary"
+    },
+    {
+      "name": "RandomForest__snapshot__original",
+      "algorithm": "RandomForest",
+      "feature_set": "snapshot",
+      "smotenc": false,
+      "role": "primary"
+    },
+    {
+      "name": "RandomForest__snapshot__SMOTENC",
+      "algorithm": "RandomForest",
+      "feature_set": "snapshot",
+      "smotenc": true,
+      "role": "primary"
+    },
+    {
+      "name": "LinearSVM__snapshot__original",
+      "algorithm": "LinearSVM",
+      "feature_set": "snapshot",
+      "smotenc": false,
+      "role": "primary"
+    },
+    {
+      "name": "LinearSVM__snapshot__SMOTENC",
+      "algorithm": "LinearSVM",
+      "feature_set": "snapshot",
+      "smotenc": true,
+      "role": "primary"
+    },
+    {
+      "name": "XGBoost__no_channel_stats__original",
+      "algorithm": "XGBoost",
+      "feature_set": "no_channel_stats",
+      "smotenc": false,
+      "role": "ablation"
+    },
+    {
+      "name": "RandomForest__no_channel_stats__original",
+      "algorithm": "RandomForest",
+      "feature_set": "no_channel_stats",
+      "smotenc": false,
+      "role": "ablation"
+    },
+    {
+      "name": "LinearSVM__no_channel_stats__original",
+      "algorithm": "LinearSVM",
+      "feature_set": "no_channel_stats",
+      "smotenc": false,
+      "role": "ablation"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "mode": "full",
+  "selected_before_test": "RandomForest__snapshot__original",
+  "data_sha256": "a8ce478d27b368fc67629e2552325aabbdf62f9187c003bde139de1030e193c2",
+  "clean_rows": 38929,
+  "channels": 218,
+  "positives": 712,
+  "experiments_completed": 9,
+  "bootstrap_valid": 1000,
+  "all_partition_channel_overlaps": 0,
+  "model_reload_check": "passed",
+  "note": "Reanalysis; old test previously inspected"
+}
