@@ -11,7 +11,7 @@ Repositori ini berisi kode, dataset, dan hasil eksperimen skripsi:
 - Program Studi: Informatika
 - Fakultas: Ilmu Komputer
 - Universitas: Universitas AMIKOM Yogyakarta
-- Dosen Pembimbing: Anggit Dwi Hartanto, M.Kom.
+- Dosen Pembimbing: Anggit Dwi Hartanto, S.Kom., M.Kom. 
 
 ## Ringkasan Penelitian
 
